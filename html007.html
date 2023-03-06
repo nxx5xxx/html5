@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+<title>
+		문서연습 -테이블
+</title>
+<style></style>
+<script></script>
+</head>
+	<body>
+		<h2>테이블 만들기</h2>
+		<table border="1" cellspacing="0" cellpadding="10">
+<!--실제로는 css에 저장해야함 table이 아닌-->
+			<caption><h2>더 조은 자바반 성적</h2></caption>
+			<thead>
+				<tr>
+					<th>번호</th><th>이름</th><th>점수</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td><td>김우주</td><td>100</td>
+				</tr>
+				<tr>
+					<td>2</td><td>이강이</td><td>100</td>
+				</tr>
+				<tr>
+					<td>3</td><td>지우</td><td>36</td>
+				</tr>
+				<tr>
+					<td>4</td><td>로켓단</td><td>66</td>
+				</tr>
+				<tr>
+					<td>5</td><td>냐옹이</td><td>82</td>
+				</tr>
+				<tr>
+					<td>6</td><td colspan="2"><center>결시생임</center></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3">정보능력에 대한 평점이 우수한 편임</td>
+				</tr>
+				<tr><td rowspan="2"><center>집계</center></td><td>총점</td><td>384</td></tr>
+				<tr>			<td>평균</td><td>76.8</td></tr>
+			</tfoot>
+		</table>
+	</body>
+</html>
