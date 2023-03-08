@@ -1,0 +1,103 @@
+<!DOCSTYLE HTML>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>
+		문서연습 - 폼 요소
+		</title>
+		<style></style>
+		<script></script>
+</head>
+
+<body>
+		<h2>폼 요소</h2>
+		<p>폼요소(=폼태그,폼엘리먼트)는 웹브라우저 상에서 데이터를 입력받아  서버로 전달 해 주도록 하는 요소로서 UI의 가장 필수적인 요소
+</p>
+		<hr>
+		<form action="join.jsp" method="post">
+<!-- 입력받은 데이터를 join.jsp로 보냄-->
+<!-- method에는 두가지 방식이 있다 주소줄에 id pw등 입력한것이 뜨는 get방식, 뜨지않는 post방식-->
+<!--get방식 : file:///D:/woozookim/html/join.jsp?id=abc&pw=1234&id2=abc&id3=ffff&id4=eeee-->
+<!-- A태그에서 쓰임 -->
+<!--post방식 : file:///D:/woozookim/html/join.jsp-->
+
+
+		<fieldset id="set1">
+			<label for="id">아이디 :</label>
+<!-- for에 id를 넣은 이유는 아이디: 를 눌러도 아래쪽 id를 누른것으로 취급해줌-->
+
+
+			<input type="text" name="id" id="id"><br><br>
+<!-- name,id는 중복불가-->
+
+			<input type="password" name="pw" id="pw" placeholder="비밀번호">
+		</fieldset>
+<!--필드를 만들어 나눔-->
+
+		<fieldset id="set2">
+			<legend>XXXXXX</legend>
+<!--필드의 이름 필드 상단에 표시됨-->
+			<input type="text" name="id2" id="id2" placeholder="입력">
+<!-- placeholder는 입력칸 내에 라벨-->
+			<input type="text" name="id3" id="id3" autofocus>
+<!-- autofocus는 페이지가 뜨자마자 칸이 활성화(커서선택이 되어있음)-->
+			<input type="text" name="id4" id="id4" required>
+<!--required는 필수 입력 칸-->
+		</fieldset>
+		
+		<fieldset id="set3">
+		<label>성별</label><br><br>
+		<label for="ml1">남
+		<input type="radio" name="ml" id="ml1" checked> &nbsp; &nbsp; &nbsp;
+		<label for="ml2">녀
+		<input type="radio" name="ml" id="ml2"><br><br>
+		</fieldset>
+<!--radio는 체크박스 name을 같게 input에 설정해야 한개만 선택가능 checked는 미리 선택해놓는 옵션-->
+		<fieldset>
+		<label>취미</label>
+		<label for="hb1"> 게임 </label>
+		<input type="checkbox" name="hb" id="hb1">&nbsp;&nbsp;&nbsp;&nbsp;
+		<label for="hb2"> 농구 </label>
+		<input type="checkbox" name=hb" id="hb2">&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- 체크박스는 중복체크가 허용됨--> <br><br>
+		</fieldset>
+
+		<fieldset>
+		<label for="city">지역</label>
+		<select name="city" id="city">
+			<option value="2">---------</option>
+			<option value="0" selected>선택안함</option>
+			<option value="a">경기도</option>
+			<option value="b">서울</option>
+			<option value="c">인천</option>
+		</select>
+<!-- selected는 미리 선택 해놓는것-->
+<!-- 각 값 ex)경기도 를 선택해서 전송을 하면 전송되는것은 밸류값 ex)a 가 전송됨-->
+		</fieldset>
+		<fieldset>
+		<label for="phone">전화번호</label>
+		<input type="tel" name="phone" id="phone" required><br><br>
+
+		<label for="email">이메일</label>
+		<input type="email" name="email" id="email"><br><br>
+
+		<label for="birth">생년월일</label>
+		<input type="date" name="birth" id="birth"><br><br>
+		
+		<label for="memo">기타사항</label>
+		<textarea name="memo" id="memo" rows="10" cols="50"></textarea>
+<!-- rows몇줄 cols한줄당 몇글자 입력가능한 크기로 할것인가 -- 크기고정이 아님-->
+		</fieldset>
+
+		<div>
+		<input type="submit" value="회원가입(전송)">
+&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="reset" value="초기화">
+			</div>
+<!-- 폼 내부에 입력되는 데이터를 파라미터라 함, 이것들을 합쳐서 전송 스트링이라 함-->
+		</form>
+<!--form태그 열고닫고 한 구역 사이에 사용자가 입력한 데이터만 보낼수 있음-->
+
+
+</body>
+</html>
